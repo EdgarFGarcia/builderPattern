@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'unauth'], function(){
+    
     Route::get('/test/{data?}', [App\Http\Controllers\API\User\CUser::class, 'getRecords']);
     Route::get('/start', [App\Http\Controllers\API\Test\CTest::class, 'start']);
+
 });
